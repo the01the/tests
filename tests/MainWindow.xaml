@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Viewbox>
+            <TextBlock x:Name="TextBlock1" 
+                FontFamily="Harlow Solid Italic" FontSize="36"
+                TextAlignment="Center" Margin="5,0,10,0"
+                Text="00:00:00" FontWeight="Bold" >
+                <TextBlock.Foreground>
+                    <SolidColorBrush
+                        Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Viewbox>
     </Grid>
 </Window>
