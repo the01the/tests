@@ -30,5 +30,10 @@ namespace tests
             ConfChangeGrid.ItemsSource = (System.Collections.IEnumerable)ConfChangeList;
 
         }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
