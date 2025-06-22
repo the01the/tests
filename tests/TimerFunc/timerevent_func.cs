@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Documents;
 
-namespace tests
+namespace TimerFunc.tests
 {
-    internal class timerevent_func
+    class Timerevent_func
     {
-        void MyTimerMethod(object sender, EventArgs e)
+        public void TimerTarget_SearchFunc()
         {
             // タイマメソッド
             // this.TextBlock1.Text = $"{DateTime.Now.ToString("HH:mm:ss")}{eventtext}";
@@ -20,6 +20,9 @@ namespace tests
 
             //検索処理
             Console.WriteLine("検索処理を実行中...");
+
+            Window configurationAleart = new ConfigurationAleart();
+            configurationAleart.Show();
         }
     }
 }

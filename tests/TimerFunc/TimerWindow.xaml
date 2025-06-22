@@ -1,0 +1,22 @@
+﻿<Window x:Class="TimerFunc.tests.TimerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tests"
+        mc:Ignorable="d"
+        Title="TimerWindow" Height="450" Width="800">
+    <Grid>
+        <Viewbox>
+            <TextBlock x:Name="TextBlock1" 
+                FontFamily="Harlow Solid Italic" FontSize="36"
+                TextAlignment="Center" Margin="5,0,10,0"
+                Text="00:00:00" FontWeight="Bold" >
+                <TextBlock.Foreground>
+                    <SolidColorBrush
+                        Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Viewbox>
+    </Grid>
+</Window>

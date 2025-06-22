@@ -12,15 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace tests
+namespace TimerFunc.tests
 {
     /// <summary>
     /// configurationAleart.xaml の相互作用ロジック
     /// </summary>
-    public partial class configurationAleart : Window
+    public partial class ConfigurationAleart : Window
     {
         List<string[]> ConfChangeList { get; set; }
-        public configurationAleart()
+        public ConfigurationAleart()
         {
             InitializeComponent();
             ConfChangeList = new List<string[]>();

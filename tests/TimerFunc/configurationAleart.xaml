@@ -1,21 +1,22 @@
-﻿<Window x:Class="tests.configurationAleart"
+﻿<Window x:Class="TimerFunc.tests.ConfigurationAleart"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:tests"
+        xmlns:local="clr-namespace:TimerFunc.tests"
         mc:Ignorable="d"
-        Title="configurationAleart" Height="450" Width="800">
+        Title="ConfigurationAleart" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="TextBlock1" 
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="TextBlock1" 
                    FontFamily="Harlow Solid Italic" FontSize="30"
                    TextAlignment="Center" Margin="5,0,10,0"
                    Text="コンフィギュレーションの変更を検知しました。" FontWeight="Bold" />
-        <TextBlock x:Name="TextBlock2" 
+            <TextBlock x:Name="TextBlock2" 
                    FontFamily="Harlow Solid Italic" FontSize="20"
                    TextAlignment="Center" Margin="5,0,10,0"
                    Text="「中断」から一時保存し、再度「検索」を行ってください。" FontWeight="Bold" />
-        <DataGrid 
+            <DataGrid 
             Name="ConfChangeGrid"
             SelectionMode="Extended" 
             SelectionUnit="FullRow"                        
@@ -24,17 +25,20 @@
             IsReadOnly="True"
             AutoGenerateColumns="False" 
             >
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="auto"  Header="変更前" />
-                <DataGridTextColumn Width="auto"  Header=""    />
-                <DataGridTextColumn Width="auto"  Header="変更後" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="Button1" 
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="auto"  Header="変更前" />
+                    <DataGridTextColumn Width="auto"  Header=""    />
+                    <DataGridTextColumn Width="auto"  Header="変更後" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="Button1" 
                 FontFamily="Harlow Solid Italic" FontSize="20"
                 Margin="5,0,10,0"
+                Height="60" Width="200"
                 Content="中断" FontWeight="Bold" 
                 Click="Button1_Click"
                 />
+        </StackPanel>
+
     </Grid>
 </Window>
