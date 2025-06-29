@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 //timer
 using System;
 using System.ComponentModel;
-using System.Windows;
 using System.Windows.Threading;
 
 using TimerFunc.tests; 

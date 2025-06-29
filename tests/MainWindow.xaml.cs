@@ -13,8 +13,7 @@ using System.Windows.Shapes;
 // Window namespaces
 using TimerFunc.tests;
 using tests.ExcelEditor;
-
-using tests.ExcelEditor;
+using tests.OneclickDatagridEdit;
 
 namespace tests
 {
@@ -38,6 +37,11 @@ namespace tests
         private void Button_Click_ExcelEditor(object sender, RoutedEventArgs e)
         {
             ExcelEditor.ExcelEditor excelEditor = new ExcelEditor.ExcelEditor();
+        }
+        private void Button_Click_OneclickDatagridEdit(object sender, RoutedEventArgs e)
+        {
+            Window newwindow = new OneclickDatagridEdit_Window();
+            newwindow.Show();
         }
     }
 }
