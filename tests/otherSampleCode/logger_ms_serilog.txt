@@ -32,6 +32,52 @@
     Install-Package System.Text.Json
     ```
 
+    ```★依存関係
+    
+インストール中:
+
+Microsoft.Extensions.DependencyInjection.9.0.6
+Microsoft.Extensions.DependencyInjection.Abstractions.9.0.6
+Microsoft.Extensions.Logging.9.0.6
+Microsoft.Extensions.Logging.Abstractions.9.0.6
+Microsoft.Extensions.Options.9.0.6
+Microsoft.Extensions.Primitives.9.0.6
+System.Diagnostics.DiagnosticSource.9.0.6
+
+インストール中:
+
+Microsoft.Extensions.Configuration.9.0.6
+Microsoft.Extensions.Configuration.Abstractions.9.0.6
+
+
+インストール中:
+
+Serilog.4.3.0
+インストール中:
+
+Microsoft.Extensions.Configuration.FileExtensions.9.0.6
+Microsoft.Extensions.Configuration.Json.9.0.6
+Microsoft.Extensions.FileProviders.Abstractions.9.0.6
+Microsoft.Extensions.FileProviders.Physical.9.0.6
+Microsoft.Extensions.FileSystemGlobbing.9.0.6
+System.IO.Pipelines.9.0.6
+System.Text.Encodings.Web.9.0.6
+System.Text.Json.9.0.6
+
+インストール中:
+
+Microsoft.Extensions.Configuration.Binder.9.0.0
+Microsoft.Extensions.DependencyModel.9.0.0
+Serilog.Settings.Configuration.9.0.0
+インストール中:
+
+Serilog.Extensions.Logging.9.0.2
+
+
+
+    ```
+
+
 2.  **`appsettings.json` の作成**
     プロジェクトのルートに `appsettings.json` ファイルを作成し、以下の内容を記述します。
     プロパティウィンドウで「出力ディレクトリにコピー」を「常にコピーする」に設定してください。

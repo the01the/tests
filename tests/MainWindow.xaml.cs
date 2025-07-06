@@ -43,5 +43,10 @@ namespace tests
             Window newwindow = new OneclickDatagridEdit_Window();
             newwindow.Show();
         }
+
+        private void Button_Click_Logging(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

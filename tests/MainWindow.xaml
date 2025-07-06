@@ -19,7 +19,11 @@
             <Button Content="OneclickDatagridEdit" 
                     Click="Button_Click_OneclickDatagridEdit"
                     Width="200" Height="60" Margin="10"
-            /> 
+            />
+            <Button Content="Logging" 
+                    Click="Button_Click_Logging"
+                    Width="200" Height="60" Margin="10"
+            />
         </StackPanel>
     </Grid>
 </Window>
