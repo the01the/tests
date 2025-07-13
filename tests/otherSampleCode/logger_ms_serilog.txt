@@ -72,7 +72,13 @@ Serilog.Settings.Configuration.9.0.0
 インストール中:
 
 Serilog.Extensions.Logging.9.0.2
-
+Serilog.Enrichers.Environment3.0.1
+Serilog.Enrichers.Process3.0.0
+Serilog.Enrichers.Thread4.0.0
+Serilog.Extensions.Logging9.0.2
+Serilog.Settings.Configuration9.0.0
+Serilog.Sinks.Debug3.0.0
+Serilog.Sinks.File7.0.0
 
 
     ```
