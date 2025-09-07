@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using System.Text.RegularExpressions;
 namespace tests.Logger
 {
     public static class LogManager
@@ -48,5 +49,49 @@ namespace tests.Logger
                 }
             }
         }
+
+        /// <summary>
+        /// ログファイルから「中断」のログを読み込み、指定されたIDに一致する変数名とデータを取得します。
+        /// </summary>
+        /// <param name="id">検索するID</param>
+        /// <returns>変数名とデータのペアのリスト。見つからない場合は空のリストを返します。</returns>
+        public static List<Tuple<string, string>> ReadInterruptedLogs(string id)
+        {
+            var resultList = new List<Tuple<string, string>>();
+
+            if (!File.Exists(LogFilePath))
+            {
+                return resultList;
+            }
+
+            // 排他制御
+            lock (_lockObject)
+            {
+                try
+                {
+                    // ファイルを読み込み、1行ずつ処理
+                    foreach (string line in File.ReadLines(LogFilePath))
+                    {
+                        // 正規表現を使用してログエントリを解析
+                        var match = Regex.Match(line, @"^[^,]+,\s*中断,\s*([^,]+),\s*([^,]+),\s*(.*),?$");
+
+                        // マッチした場合、かつIDが一致した場合
+                        if (match.Success && match.Groups[1].Value.Trim() == id)
+                        {
+                            string variableName = match.Groups[2].Value.Trim();
+                            string data = match.Groups[3].Value.Trim();
+                            resultList.Add(new Tuple<string, string>(variableName, data));
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"ログ読み込みエラー: {ex.Message}");
+                }
+            }
+
+            return resultList;
+        }
+
     }
 }
