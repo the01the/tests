@@ -46,7 +46,7 @@ namespace tests
             _dataCacheService = dataCacheService;
 
             _logger.LogInformation("MainWindowが初期化されました。"); // Informationレベルのログ
-
+            LogManager.Write("アプリケーションが起動しました。");
             DisplayedData = new ObservableCollection<MyDataItem>();//表示するデータ
             this.DataContext = this;
 
@@ -64,6 +64,7 @@ namespace tests
         }
         private void Button_Click_OneclickDatagridEdit(object sender, RoutedEventArgs e)
         {
+            LogManager.Write("Button_Click_OneclickDatagridEdit");
             Window newwindow = new OneclickDatagridEdit_Window();
             newwindow.Show();
         }
